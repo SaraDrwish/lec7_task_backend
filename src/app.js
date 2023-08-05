@@ -131,39 +131,78 @@ const forecast = require("./Tools/forecast")
 // ------------------------------------task 7-----------------------------------------------------------------------------------
 
   
-    app.get("/weather", (req, res) => {
-    res.render("weather", {
-        title: "Weather Page",
-        location: "",
-        latitude: "",
-        longitude: "",
-        forecastData: "",
-    });
+//     app.get("/weather", (req, res) => {
+//     res.render("weather", {
+//         title: "Weather Page",
+//         location: "",
+//         latitude: "",
+//         longitude: "",
+//         forecastData: "",
+//     });
  
 
+// });
+
+
+// app.get("/getWeather", (req, res) => {
+//     const address = req.query.address; // Get the address from the query parameter
+
+//     if (!address) {
+//         return res.status(400).json({ error: "Please provide an address" });
+//     }
+
+//     // Use the geocode function to fetch the latitude, longitude, and location based on the address.
+//     geocode(address, (error, { latitude, longitude, location } = {}) => {
+//         if (error) {
+//             return res.status(500).json({ error });
+//         }
+
+//         // Use the forecast function to fetch the weather data based on the latitude and longitude.
+//         forecast(latitude, longitude, (error, forecastData) => {
+//             if (error) {
+//                 return res.status(500).json({ error });
+//             }
+
+//             // Return the weather data as JSON response.
+//             res.json({
+//                 location,
+//                 latitude,
+//                 longitude,
+//                 forecastData,
+//             });
+//         });
+//     });
+// });
+
+// ------task 7 other way ---------------------------------------
+
+
+//  const geocode = require("./Tools/geocode");
+// const forecast = require("./Tools/forecast");
+
+app.get("/weather", (req, res) => {
+    res.render("weather", {
+        title: "Weather Page",
+    });
 });
 
-
 app.get("/getWeather", (req, res) => {
-    const address = req.query.address; // Get the address from the query parameter
+    const address = req.query.address;
 
     if (!address) {
         return res.status(400).json({ error: "Please provide an address" });
     }
 
-    // Use the geocode function to fetch the latitude, longitude, and location based on the address.
     geocode(address, (error, { latitude, longitude, location } = {}) => {
         if (error) {
             return res.status(500).json({ error });
         }
 
-        // Use the forecast function to fetch the weather data based on the latitude and longitude.
         forecast(latitude, longitude, (error, forecastData) => {
             if (error) {
                 return res.status(500).json({ error });
             }
 
-            // Return the weather data as JSON response.
             res.json({
                 location,
                 latitude,
@@ -174,10 +213,6 @@ app.get("/getWeather", (req, res) => {
     });
 });
 
-// ---------------------------------------------
-
-
- 
 
 // ---------------------------------------------
 

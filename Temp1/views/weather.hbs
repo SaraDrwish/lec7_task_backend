@@ -10,7 +10,9 @@
 
 
     <section id="weather" class="weather">
-
+            <div>
+                {{>header}}
+            </div>
             <div>
                 <form id="form1">
                     <input type="text" id="address">
@@ -20,8 +22,8 @@
                 {{!-- <p id="latitudeAndlongitude"> </p> --}}
                 <p id="latitude"> </p>
                 <p id="longitude"> </p>
-                <p id="weatherStatus"></p>
-                <p id="error"> </p>
+                {{!-- <p id="weatherStatus"></p> --}}
+                {{!-- <p id="error"> </p> --}}
             </div>
 
     </section>
