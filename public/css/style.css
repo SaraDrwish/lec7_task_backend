@@ -6,9 +6,9 @@
     /* background-color: rgb(64, 64, 64); */
 }
 section{
-    margin: auto;
+    margin:  auto;
     padding: 2%;
-    background-color: rgb(255, 206, 235);
+    background-color: rgb(233, 207, 223);
     color: rgb(87, 18, 27);
 }
 h2{
@@ -16,13 +16,19 @@ h2{
     font-size: 2rem;
     background-color: rgba(8, 32, 75, 0.932);
     padding: 1%;
+    margin: 1%;
+}
+p{
+    margin: 1%;
+    padding: 1%;
+    color: rgb(148, 63, 77);
 }
 a{
     text-decoration: none;
     color: unset;
     font-weight: bold;
     display: inline-block;
-    padding: 1%;
+    padding: 1% 2%;
     cursor: pointer;
     transition: all 0.6s ease;
     -webkit-transition: all 0.6s ease;
@@ -42,6 +48,26 @@ button{
     -ms-border-radius: 11%;
     -o-border-radius: 11%;
     cursor: pointer;
+    padding: 1%;
+    margin: 1%;
+    background-color: pink;
+}
+input{
+    border: none;
+    border-radius: 2%;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -ms-border-radius: 2%;
+    -o-border-radius: 2%;
+    color: rgb(255, 77, 107);
+    padding: 1%;
+    outline: none;
+    font-weight: 600;
+    margin: 1%;
+}
+input:focus{
+    outline: none;
+    border: none;
 }
 .header1{
     position: fixed;
