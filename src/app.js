@@ -9,20 +9,13 @@ const path = require("path");
 const x = path.join(__dirname, '../public'); 
 app.use(express.static(x));
 
-const weather = require("../Data/weather")
-const geo = require("../Data/geo")
-
 const hbs = require("hbs");
-
-
 
 
 // ---------------------
 
 
-
 // ----------------------
-
 
 
 app.set('view engine', 'hbs');
@@ -92,25 +85,25 @@ app.get("/products", (req, res) => {
 
 // --------------------------
 
-//task 7 
+//task 7 --------------------------------------------------------------------------------------------------------------
 
 const geocode = require("./Tools/geocode")
 const forecast = require("./Tools/forecast")
 
-app.get("/weather2", (req, res) => {
+app.get("/weather", (req, res) => {
     if (!req.query.address) {
         return res.send( {
-            erorr: "enter adress"
+            error: "enter adress"
         })
     }
 
-        geocode(req.query.address, (erorr, data) => {
-            if (erorr) { // geocode reorr 
-                return res.send({erorr})
+        geocode(req.query.address, (error, data) => {
+            if (error) { // geocode reorr 
+                return res.send({error})
             }
-            forecast(data.latitude, data.longitude, (erorr, dataForecadt) => {
-                if (erorr) { //forecast erorr
-                    return res.send({erorr})
+            forecast(data.latitude, data.longitude, (error, dataForecadt) => {
+                if (error) { //forecast erorr -- error
+                    return res.send({error})
                 }
                 res.send(
                     {
@@ -126,39 +119,23 @@ app.get("/weather2", (req, res) => {
 
 
 
+//task 7 end --------------------------------------------------------------------------------------------------------------
 
-// ----------------------------
+
+
+ 
 //at last 
 
 app.get("*", (req, res) => {
-    
-    res.send("404 page not found ")
-
+    res.send("404 page not found sara said ")
 })
 
 
 // lastest
 
 app.listen(port, () => {
-    console.log(` the port is ${port}`)
+    console.log(` the port is ${port} sara's code `)
 })
 
-
-// ------------------------
-
-// const country = process.argv[2]
-// geo(country, (error, data) => {
-//     const data0 = console.log("data : " + data);
-//     const erorr0 = console.log("error : " + error);
-//     if (data) {
-//         weather(data.latitude, data.longitude, (error, data) => {
-//            const data1 =  console.log("data : " + data);
-//            const erorr1 = console.log("error : " + error);
-//         })
-//     } else {
-//         const dataErorr = console.log("data entered is an erorr ")
-//     }
-// }
-// )
 
 // ------------------------

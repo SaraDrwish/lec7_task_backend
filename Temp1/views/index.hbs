@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../public/css/style.css">
-    <title> home hbs </title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../public/css/style.css">
+        <title> home hbs </title>
+    </head>
+
+    <body>
+
+        <div>
+            {{>header}}
+        </div>
+        <section id="home">
+            <h2> h2 {{title}} home hbs page </h2>
+            <p> {{desc}} </p>
+            <div>
+                <form id="form1">
+                    <input type="text" id="address">
+                    <button id="search"> search </button>
+                </form>
+                <p id="location"> </p>
+                <p id="forecast"> </p>
+                <p id="error"> </p>
+            </div>
+            
+        </section>
+        <div>
+            {{>footer}}
+        </div>
 
 
-</head>
+    <script src="../../public/js/script.js" > </script>
 
-<body>
-
-    <div>
-        {{>header}}
-    </div>
-    <section id="home">
-        <h2> h2 {{title}} home hbs page </h2>
-        <p> {{desc}} </p>
-    </section>
-    <div>
-        {{>footer}}
-    </div>
-
-</body>
+    </body>
 
 </html>
