@@ -6,8 +6,8 @@ const app = express();
 const port = 3000;
 
 const path = require("path");
-const x = path.join(__dirname, '../public'); 
-app.use(express.static(x));
+const publicPath = path.join(__dirname, "../public");
+app.use(express.static(publicPath));
 
 const hbs = require("hbs");
 
@@ -91,6 +91,7 @@ const geocode = require("./Tools/geocode")
 const forecast = require("./Tools/forecast")
 
 app.get("/weather", (req, res) => {
+    console.log("Received request for /weather:", req.query);
     if (!req.query.address) {
         return res.send( {
             error: "enter adress"
