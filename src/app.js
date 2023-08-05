@@ -100,8 +100,8 @@ app.get("/products", (req, res) => {
 const geocode = require("./Tools/geocode")
 const forecast = require("./Tools/forecast")
 
-// app.get("/weather", (req, res) => {
-//     console.log("Received request for /weather:", req.query);
+// app.get("/weather2", (req, res) => {
+//     console.log("Received request for /weather2:", req.query);
 //     if (!req.query.address) {
 //         return res.send( {
 //             error: "enter adress"
