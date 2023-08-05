@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    background-color: rgb(64, 64, 64);
+}
+section{
+    margin: auto;
+    padding: 1%;
+    background-color: rgb(226, 254, 255);
+}
+h2{
+    color: rgb(78, 124, 154);
+    font-size: 2rem;
+    background-color: rgba(8, 32, 75, 0.932);
+    padding: 1%;
+}
+a{
+    text-decoration: none;
+    color: unset;
+    font-weight: bold;
+    display: inline-block;
+    padding: 1%;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+}
+a:hover{
+    color: rgb(167, 243, 255);
+}
+ 
+button{
+    border: none;
+    border-radius: 11%;
+    -webkit-border-radius: 11%;
+    -moz-border-radius: 11%;
+    -ms-border-radius: 11%;
+    -o-border-radius: 11%;
+    cursor: pointer;
+}
+.header1{
+    position: fixed;
+    top: 0;
+    margin: auto;
+    padding: 1%;
+
+}
+#footer-btm-sec , .footer1{
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    padding: 1%;
+    z-index: 1;
+    background-color: rgba(143, 143, 143, 0.837);
+}
+
+::selection{
+    color: rgba(188, 239, 255, 0.873);
+}
+
+
+
