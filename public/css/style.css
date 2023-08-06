@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
     text-transform: capitalize;
-    background-color: rgb(207, 221, 233);
+ }
+ body{
+        background-color: rgb(207, 221, 233);
  }
 section{
     margin:  auto;
@@ -72,9 +74,11 @@ input:focus{
 .header1{
     position: fixed;
     top: 0;
+    left: 0;
     margin: auto;
     width: 100%;
     padding: 1%;
+    background-color: pink;
 }
 #footer-btm-sec {
     position: fixed;
