@@ -8,7 +8,7 @@ section{
     margin:  auto;
     padding: 2%;
     background-color: rgb(207, 221, 233);
-    color:rgb(207, 220, 233);
+    color:rgb(46, 71, 96);
 }
 h2{
     color: rgb(60, 103, 132);
@@ -20,7 +20,7 @@ h2{
 p{
     margin: 1%;
     padding: 1%;
-    color: rgb(69, 63, 148);
+    color: rgb(5, 0, 74);
 }
 a{
     text-decoration: none;
@@ -36,7 +36,7 @@ a{
     -o-transition: all 0.6s ease;
 }
 a:hover{
-    color: rgb(80, 195, 212);
+    color: rgb(45, 107, 116);
 }
  
 button{
@@ -58,7 +58,7 @@ input{
     -moz-border-radius: 2%;
     -ms-border-radius: 2%;
     -o-border-radius: 2%;
-    color: rgb(77, 116, 255);
+    color: rgb(68, 87, 156);
     padding: 1%;
     outline: none;
     font-weight: 600;
